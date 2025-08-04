@@ -19,8 +19,7 @@ Este projeto é um formulário simples com os campos **nome**, **e-mail** e **te
 
  Validação de campos no backend  
  Envio de dados via `fetch` no frontend  
- Envio de e-mail automático ao receber um formulário  
- Separação segura da senha com variáveis de ambiente (`.env`)
+ Envio de e-mail automático ao receber um formulário 
 
 ---
 
