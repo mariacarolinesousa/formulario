@@ -1,10 +1,10 @@
-# 📬 Formulário com Backend em Node.js
+#  Formulário com Backend em Node.js
 
 Este projeto é um formulário simples com os campos **nome**, **e-mail** e **telefone**, conectado a um backend em **Node.js**. Ao enviar, os dados são processados e enviados diretamente por e-mail usando o Nodemailer.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 - HTML5 + CSS3 + JavaScript
 - Node.js + Express
