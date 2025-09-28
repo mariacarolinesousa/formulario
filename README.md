@@ -4,6 +4,9 @@ Este projeto é um formulário simples com os campos **nome**, **e-mail** e **te
 
 ---
 
+<img width="1365" height="767" alt="print_formulario" src="https://github.com/user-attachments/assets/c084fd80-5860-4d01-927b-2daf32126074" />
+
+
 ##  Tecnologias utilizadas
 
 - HTML5 + CSS3 + JavaScript
@@ -46,6 +49,5 @@ node server.js
 
 ## Feito por: Maria Caroline Sousa
 
-<img width="1365" height="767" alt="print_formulario" src="https://github.com/user-attachments/assets/c084fd80-5860-4d01-927b-2daf32126074" />
 
   
