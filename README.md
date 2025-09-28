@@ -46,8 +46,6 @@ node server.js
 
 ## Feito por: Maria Caroline Sousa
 
-<picture>
-<img src="/img/print_formulario.png" alt="Meu Primeiro Formulário">
-</picture>
+<img width="1365" height="767" alt="print_formulario" src="https://github.com/user-attachments/assets/c084fd80-5860-4d01-927b-2daf32126074" />
 
   
