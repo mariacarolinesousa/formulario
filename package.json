@@ -8,11 +8,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Este projeto é um formulário simples com os campos **nome**, **e-mail** e **telefone**, conectado a um backend em **Node.js**. Ao enviar, os dados são processados e enviados diretamente por e-mail usando o Nodemailer.",
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "nodemailer": "^7.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariacarolinesousa/formulario.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mariacarolinesousa/formulario/issues"
+  },
+  "homepage": "https://github.com/mariacarolinesousa/formulario#readme"
 }

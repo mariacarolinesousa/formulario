@@ -1,4 +1,3 @@
-const nodemailer = require('nodemailer');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -6,39 +5,21 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
 
-//Criando transportador para o nodemailer
-const transporter = nodemailer.createTransport({
-    service: 'gmail.com',
-    auth: {
-        user: 'caroline@gmail.com',
-        pass: 'xxxx xxxx xxxx xxxx'
-    }
-});
-
-// Middleware para permitir requisições de outros domínios e processar JSON 
-app.use(cors());
+//Permite receber dados JSON e aceitar requisições de outros domínios
+app.use(cors({ origin: 'http://127.0.0.1:5500'}));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true}));
 
-// Rota para receber os dados do formulário
+//Rota para receber o formulário 
 app.post('/enviar', (req, res) => {
-  const { nome, email, telefone } = req.body;
+  const {nome, email, telefone } = req.body;
+  console.log(`Novo envio: ${nome}, ${email}, ${telefone}`);
 
-  // Verificação simples
-  if (!nome || !email || !telefone) {
-    return res.status(400).json({ erro: 'Preencha todos os campos.' });
-  }
-
-  console.log('Dados Recebidos:');
-  console.log('Nome:', nome);
-  console.log('Email:', email);
-  console.log('Telefone:', telefone);
-
-  // Enviando resposta para o navegador
-  res.status(200).json({ mensagem: 'Formulário enviado com sucesso!' });
+  //salva no banco, manda por email, etc..
+  res.json({ mensagem: 'Formulário recebido com sucesso!'});
 });
 
-// Iniciando o Servidor
+//Iniciando o Servidor
 app.listen(PORT, () => {
-  console.log('Servidor rodando em http://localhost:3000');
-});
+  console.log(`Servidor rodando em http:localhost:${PORT}`);
+})

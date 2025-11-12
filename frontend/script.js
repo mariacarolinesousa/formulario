@@ -1,31 +1,26 @@
-document.getElementById('formulario').addEventListener('submit', async (e) => {
-  e.preventDefault();
+const form = document.getElementById('formulario');
 
-  const form = e.target;
-  //pegando via names 
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); //impede o carregamento da página
+
   const dados = {
-    nome: form.nome.value.trim(),
-    email: form.email.value.trim(),
-    telefone: form.telefone.value.trim(),
+    nome: form.nome.value,
+    email: form.email.value,
+    telefone: form.telefone.value
   };
 
-  const resposta = await fetch('api/enviar', { 
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(dados),
-  });
+  try {
+    const resposta = await fetch('http://localhost:3000/enviar', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(dados)
+    });
 
-  if(!resposta.ok) {
-    const err = await resposta.json().catch(() => ({ erro: 'Erro desconhecido'}));
-    throw new Error(err.erro || 'Erro no envio');
-  }
-
-const resultado = await resposta.json();
-alert(resultado.mensagem || 'Enviado com sucesso!');
-form.reset();
-} ,{catch (error) {
-  console.error('Erro ao enviar:', error);
-  alert('Não foi possível enviar o formulário. Veja o console para detalhes.')
-}
-
-});
+    const resultado = await resposta.json();
+    alert(resultado.mensagem);
+    form.reset();
+    } catch (erro) {
+      alert('Erro ao enviar formulário.');
+      console.error(erro);
+    }
+    });
