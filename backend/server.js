@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 //Permite receber dados JSON e aceitar requisições de outros domínios
-app.use(cors({ origin: 'http://127.0.0.1:5500'}));
+app.use(cors({ origin: 'http://127.0.0.1:5500', 'https://formulario-fk5u.onrender.com' }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
@@ -22,6 +22,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 })
+
 
 
 
