@@ -10,7 +10,7 @@ form.addEventListener('submit', async (event) => {
   };
 
   try {
-    const resposta = await fetch('http://localhost:3000/enviar', {
+    const resposta = await fetch('https://formulario-fk5u.onrender.com/enviar', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(dados)
@@ -24,3 +24,4 @@ form.addEventListener('submit', async (event) => {
       console.error(erro);
     }
     });
+
