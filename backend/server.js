@@ -14,8 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.post('/enviar', (req, res) => {
   const {nome, email, telefone } = req.body;
   console.log(`Novo envio: ${nome}, ${email}, ${telefone}`);
-
-  //salva no banco, manda por email, etc..
+  
   res.json({ mensagem: 'Formulário recebido com sucesso!'});
 });
 
@@ -24,4 +23,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 })
+
 
