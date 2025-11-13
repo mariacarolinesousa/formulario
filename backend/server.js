@@ -3,7 +3,6 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 3000;
 
 //Permite receber dados JSON e aceitar requisições de outros domínios
 app.use(cors({ origin: 'http://127.0.0.1:5500'}));
@@ -23,5 +22,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 })
+
 
 
