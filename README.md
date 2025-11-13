@@ -4,14 +4,11 @@ Este projeto é um formulário simples com os campos **nome**, **e-mail** e **te
 
 ---
 
-<img width="1365" height="767" alt="print_formulario" src="https://github.com/user-attachments/assets/c084fd80-5860-4d01-927b-2daf32126074" />
-
 
 ##  Tecnologias utilizadas
 
 - HTML5 + CSS3 + JavaScript
 - Node.js + Express
-- Nodemailer
 - dotenv
 - body-parser
 - cors
@@ -30,24 +27,26 @@ Este projeto é um formulário simples com os campos **nome**, **e-mail** e **te
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/mariacarolinesousa/Form.git
+git clone https://github.com/mariacarolinesousa/formulario.git
 
 # 2. Entre na pasta do projeto
-cd Form
+cd formulario
 
 # 3. Instale as dependências
 npm install
+npm install express
+npm install cors body-parser
 
-# 4. Crie o arquivo .env com suas credenciais:
-
-GMAIL_USER=seuemail@gmail.com
-GMAIL_PASS=sua-senha-de-aplicativo
-EMAIL_DESTINO=email-de-destino@gmail.com
 
 # 5. Rode o servidor
 node server.js
 
+````
+
 ## Feito por: Maria Caroline Sousa
+
+(link)
+https://formulario-eight-chi.vercel.app/
 
 
   
